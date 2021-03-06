@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2">
+    {{#each searches}}
+      <li class="list-group-item">
+        <div class="lead">
+          <a href="/search/{{this.id}}">{{this.title}}</a>
+        </div>
+        
+        <a href="{{this.sourceUrl}}" target="_blank">{{this.sourceUrl}}</a>
+
+        <div class="text-right">
+            <a href="/{{this.image}}">{{this.image}}</a>
+        </div>
+      </li>
+    {{/each}}
+  </div>
+</div>
