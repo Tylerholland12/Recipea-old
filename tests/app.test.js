@@ -1,4 +1,4 @@
-// const mocha = require("mocha")
+// Required Libraries
 const chai = require("chai")
 const mongoose = require('mongoose')
 const chaiHttp = require('chai-http');
@@ -13,7 +13,6 @@ it("Should be able to see homepage", () => {
         .get('/')
         .end((err, res) => {
             res.should.have.status(200);
-            res.body.should.be.a('object');
          });
 });
 });

@@ -6,6 +6,8 @@ var unirest = require("unirest");
 
 var req = unirest("GET", "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search");
 
+
+// query string contents
 req.query({
 	"query": "burger",
 	"diet": "vegetarian",

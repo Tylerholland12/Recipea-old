@@ -1,6 +1,8 @@
+// Required Libraries
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+// Setting up the model 
 const PostSchema = new Schema({
     title: { type: String, required: true },
     sourceUrl: { type: String, required: true },
@@ -13,4 +15,5 @@ const PostSchema = new Schema({
       .pre('findOne', Populate('author'))
       .pre('find', Populate('author'))
   
+// Export model
   module.exports = mongoose.model("Post", PostSchema);
